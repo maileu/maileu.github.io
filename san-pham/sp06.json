@@ -1,0 +1,17 @@
+{
+  "ma": "SP06",
+  "ten": "Đèn pin sạc 1000 lumen",
+  "nhom": "Đèn",
+  "gia_ban": 690000,
+  "gia_thue_ngay": 35000,
+  "ly_do": "Đi đêm",
+  "mo_ta": "Ba mức sáng, chống nước IPX6, sạc Type-C.",
+  "thong_so": [
+    "Độ sáng: 1000 lm",
+    "Pin: 5000 mAh",
+    "Chống nước: IPX6",
+    "Sạc: USB-C"
+  ],
+  "anh": [],
+  "hien": true
+}

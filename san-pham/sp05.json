@@ -1,0 +1,17 @@
+{
+  "ma": "SP05",
+  "ten": "Bếp gas mini xoay",
+  "nhom": "Bếp",
+  "gia_ban": 420000,
+  "gia_thue_ngay": 25000,
+  "ly_do": "Nấu ăn",
+  "mo_ta": "Gấp bằng lòng bàn tay, sôi 1 lít trong 3 phút rưỡi.",
+  "thong_so": [
+    "Trọng lượng: 98 g",
+    "Công suất: 2800 W",
+    "Nhiên liệu: Gas mini",
+    "Kèm: Hộp nhựa cứng"
+  ],
+  "anh": [],
+  "hien": true
+}

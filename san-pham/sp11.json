@@ -1,0 +1,17 @@
+{
+  "ma": "SP11",
+  "ten": "Bình lọc nước dã ngoại 2L",
+  "nhom": "Phụ kiện",
+  "gia_ban": 780000,
+  "gia_thue_ngay": 40000,
+  "ly_do": "Nước suối",
+  "mo_ta": "Lọc 0,1 micron, uống trực tiếp từ suối.",
+  "thong_so": [
+    "Dung tích: 2 L",
+    "Lõi lọc: 0,1 µm",
+    "Tuổi thọ lõi: 2000 L",
+    "Trọng lượng: 190 g"
+  ],
+  "anh": [],
+  "hien": true
+}

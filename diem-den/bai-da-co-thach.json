@@ -1,11 +1,5 @@
 {
-  "ma": "bai-da-co-thach",
-  "ten": "Bãi đá Cổ Thạch",
-  "tinh": "Bình Thuận",
-  "vung": "Miền Trung",
-  "do_cao_m": 0,
-  "loai": "Camping",
-  "do_kho": "Dễ",
+  "gioi_thieu": "Bãi đá bảy màu. Khoảng tháng 2–3 rêu xanh phủ kín đá, đẹp nhất nhưng cũng trơn nhất.",
   "thang_di_duoc": [
     12,
     1,
@@ -13,13 +7,19 @@
     3,
     4
   ],
-  "gioi_thieu": "Bãi đá bảy màu. Khoảng tháng 2–3 rêu xanh phủ kín đá, đẹp nhất nhưng cũng trơn nhất.",
-  "anh": [],
   "hien": true,
-  "q1_so_lan_di": "",
-  "q2_xuat_phat_gui_xe": "",
-  "q3_nuoc": "",
-  "q4_ngu_lanh_gio": "",
-  "q5_ai_khong_nen_di": "",
-  "q6_thieu_thua": ""
+  "loai": "Camping",
+  "do_cao_m": 0,
+  "q1_so_lan_di": "Đi rất nhiều lần rồi, vì đây là quê của Công, nhà Công cách đây 19 phút đi xe máy.",
+  "tinh": "Bình Thuận",
+  "ma": "bai-da-co-thach",
+  "q6_thieu_thua": "Nên mang áo gió và kem trống muỗi. Mang thiếu hay thừa còn dựa vào nhu cầu cá nhân của mỗi người, điều này thuộc về sở thích",
+  "q2_xuat_phat_gui_xe": "Gửi xe tại chùa hoặc là các quán ăn sát biển. An toàn và chi phí thường tâm 5k - 10k.",
+  "vung": "Miền Trung",
+  "q3_nuoc": "Nước mua tại mấy quán quen biển rồi chọn bãi nào đó camp",
+  "anh": [],
+  "q4_ngu_lanh_gio": "Đêm không quá lạnh, tầm 22 - 24 độ. Nhưng gió thì mạnh đấy",
+  "ten": "Bãi đá Cổ Thạch",
+  "q5_ai_khong_nen_di": "Người hay bị trúng gió.",
+  "do_kho": "Dễ"
 }

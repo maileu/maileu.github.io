@@ -228,6 +228,27 @@ for d in DD:
     near = "".join('<a href="/diem-den/%s/">%s</a>' % (o["ma"], E(o["ten"]))
                    for o in DD if o["vung"] == d["vung"] and o["ma"] != ma)[:4000]
 
+    # gói thuê trọn bộ
+    thue = [byid[i] for i in gear_for(d) if byid.get(i) and byid[i]["gia_thue_ngay"]]
+    goi = ""
+    if len(thue) >= 3:
+        goc = sum(q["gia_thue_ngay"] for q in thue)
+        giam = int(SHOP.get("giam_goi_thue", 15) or 0)
+        gia = lambda n: int(round(goc * n * (100 - giam) / 100.0 / 1000)) * 1000
+        zg = ("Chào shop, mình muốn thuê trọn bộ đi %s (%s):\n" % (ten, d["tinh"])
+              + "\n".join("- " + q["ten"] for q in thue)
+              + "\n\nGói 2 ngày: %s\nGói 3 ngày: %s" % (vnd(gia(2)), vnd(gia(3)))
+              + "\n\nCho mình hỏi thủ tục cọc và ngày trả với ạ.")
+        goi = """<section><div class="goi">
+    <div class="goi-t">Thuê trọn bộ đi %s<span class="bad">rẻ hơn %d%%</span></div>
+    <p>%d món thuê được trong danh sách trên, gộp thành một gói. Đi lần đầu thì thuê rẻ hơn mua rất nhiều.</p>
+    <div class="goi-g">%s</div>
+    <a class="btn dark" target="_blank" rel="noopener" href="%s">Nhắn Zalo đặt gói này</a>
+  </div></section>""" % (E(ten), giam, len(thue),
+            "".join('<div><span class="n">%d ngày</span><span class="v">%s</span><span class="cu">%s</span></div>'
+                    % (n, vnd(gia(n)), vnd(goc * n)) for n in (1, 2, 3)),
+            "https://zalo.me/%s?text=%s" % (SHOP["zalo_2"], urllib.parse.quote(zg)))
+
     zmsg = "Chào shop, mình định đi %s (%s). Cho mình hỏi nên chuẩn bị gì ạ?" % (ten, d["tinh"])
     zalo = "https://zalo.me/%s?text=%s" % (SHOP["zalo_1"], urllib.parse.quote(zmsg))
     maps = "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(
@@ -248,7 +269,7 @@ for d in DD:
                  ("__TEN__", E(ten)), ("__CHIPS__", chips),
                  ("__GIOITHIEU__", E(d.get("gioi_thieu", ""))), ("__MAPS__", maps),
                  ("__ANH__", anh), ("__MONTHS__", months), ("__KINHNGHIEM__", kn),
-                 ("__GEAR__", cards), ("__ZALO__", zalo), ("__NEAR__", near)]:
+                 ("__GEAR__", cards), ("__GOI__", goi), ("__ZALO__", zalo), ("__NEAR__", near)]:
         page = page.replace(k, v)
     wr("diem-den/%s/index.html" % ma, rebase(gan_tim(page)))
 

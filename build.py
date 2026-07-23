@@ -32,11 +32,13 @@ SUN = {"ban-dao-son-tra","cu-lao-cham","nui-chua","bai-xep-phu-yen","dao-binh-hu
  "vuon-quoc-gia-tram-chim","quan-dao-nam-du","hon-son","dat-mui-ca-mau",
  "binh-chau-ho-coc","ho-tram","nganh-tam-tan-lagi","mui-ke-ga","bau-trang",
  "bai-da-co-thach","cu-lao-cau","dao-phu-quy","binh-lap","vinh-hy-hang-rai",
- "mui-dinh","dao-binh-ba"}
+ "mui-dinh","dao-binh-ba","vung-ro","bai-canh-duong-lang-co",
+ "quan-dao-hai-tac","mui-nai-ha-tien","cong-vien-da-ninh-thuan","bai-thung"}
 SEA = {"vinh-lan-ha-cat-ba","cu-lao-cham","bai-xep-phu-yen","dao-binh-hung","con-dao",
  "rung-sac-can-gio","quan-dao-nam-du","hon-son","dat-mui-ca-mau","binh-chau-ho-coc",
  "ho-tram","nganh-tam-tan-lagi","mui-ke-ga","bai-da-co-thach","cu-lao-cau",
- "dao-phu-quy","binh-lap","vinh-hy-hang-rai","mui-dinh","dao-binh-ba"}
+ "dao-phu-quy","binh-lap","vinh-hy-hang-rai","mui-dinh","dao-binh-ba","vung-ro","bai-canh-duong-lang-co",
+ "quan-dao-hai-tac","mui-nai-ha-tien","cong-vien-da-ninh-thuan","bai-thung"}
 
 def gear_for(d):
     t, alt, ma = d["loai"], d["do_cao_m"], d["ma"]
@@ -408,6 +410,11 @@ for src, dst in [("static", "static"), ("admin", "admin")]:
     s = os.path.join(ROOT, src)
     if os.path.isdir(s):
         shutil.copytree(s, os.path.join(OUT, dst), dirs_exist_ok=True)
+
+# ── file xác minh Google Search Console (googleXXXX.html ở gốc kho) ──
+for f in glob.glob(os.path.join(ROOT, "google*.html")):
+    shutil.copy(f, os.path.join(OUT, os.path.basename(f)))
+    print("Đã chép file xác minh:", os.path.basename(f))
 
 # ── sitemap + robots ──
 urls = ([SITE + "/", SITE + "/san-pham/"]

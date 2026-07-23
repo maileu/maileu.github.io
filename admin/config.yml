@@ -38,6 +38,8 @@ collections:
     label: "Điểm đến"
     label_singular: "điểm đến"
     folder: "diem-den"
+    extension: json
+    format: json
     create: true
     slug: "{{fields.ma}}"
     identifier_field: ten
@@ -68,6 +70,8 @@ collections:
     label: "Sản phẩm"
     label_singular: "sản phẩm"
     folder: "san-pham"
+    extension: json
+    format: json
     create: true
     slug: "{{fields.ma}}"
     identifier_field: ten
